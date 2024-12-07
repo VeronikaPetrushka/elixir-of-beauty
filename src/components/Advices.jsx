@@ -63,13 +63,14 @@ const Advices = () => {
                                         pressed === item && (
                                             <View style={{width: '100%'}}>
                                                 <Text style={styles.tip}>{item.description}</Text>
+                                                {item.description2 && <Text style={styles.tip}>{item.description2}</Text>}
                                                 {
                                                     item.items.map((i, index) => (
                                                         <View key={index} style={{width: '100%'}}>
-                                                            <Text style={styles.tip}>{i.item}</Text>
-                                                            {i.option1 && <Text style={styles.option}>{i.option1}</Text>}
-                                                            {i.option2 && <Text style={styles.option}>{i.option2}</Text>}
-                                                            {i.option3 && <Text style={styles.option}>{i.option3}</Text>}
+                                                            <Text style={styles.tip}>- {i.item}</Text>
+                                                            {i.option1 && <Text style={styles.option}>** {i.option1}</Text>}
+                                                            {i.option2 && <Text style={styles.option}>** {i.option2}</Text>}
+                                                            {i.option3 && <Text style={styles.option}>** {i.option3}</Text>}
                                                         </View>
                                                     ))
                                                 }

@@ -49,7 +49,7 @@ const Article = ({article}) => {
                                     <View key={index}>
                                         <Text style={styles.subTitle}>{item.item}</Text>
                                         <Text style={[styles.description, {color: '#8a0040'}]}>{item.description}</Text>
-                                        {item.description2 && (<Text style={[styles.description, {color: '#8a0040'}]}>{item.description2}</Text>)}
+                                        {item.description2 && <Text style={[styles.description, {color: '#8a0040'}]}>{item.description2}</Text>}
                                     </View>
                                 ))
                             )
