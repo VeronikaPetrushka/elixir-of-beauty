@@ -14,7 +14,8 @@ const plan = [
                     'Avoid aggressive cleaning agents.',
                     'Wash with warm, not hot, water.',
                     'Moisturizing masks 1-2 times a week, soft peeling.'
-                ]
+                ],
+                image: require('../assets/plan/1.png')
             },
             {
                 option: 'Oily, shine appears.',
@@ -28,7 +29,8 @@ const plan = [
                     'Use non-comedogenic creams.',
                     'Do not avoid moisturizing - choose light gel textures.',
                     'Clay masks 1-2 times a week, peeling with salicylic acid.'
-                ]
+                ],
+                image: require('../assets/plan/2.png')
             },
             {
                 option: 'Normal, no discomfort.',
@@ -42,7 +44,8 @@ const plan = [
                     'Moisturizing should be light and not overload the skin.',
                     'Apply clay masks for the T-zone once a week.',
                     'Clay masks for the T-zone, moisturizing for the cheeks, peeling once a week.'
-                ]
+                ],
+                image: require('../assets/plan/3.png')
             },
             {
                 option: 'Shiny in the T-zone, but dry on the cheeks.',
@@ -56,7 +59,8 @@ const plan = [
                     'Protect your skin from UV rays.',
                     'Care can be minimized, but do not forget about regular cleaning.',
                     'Moisturizing masks once a week, light peeling once a week.'
-                ]
+                ],
+                image: require('../assets/plan/4.png')
             },
         ]
     },
