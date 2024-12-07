@@ -28,33 +28,33 @@ const MenuPanel = () => {
 
             <View style={styles.btnContainer}>
                 <TouchableOpacity 
-                    style={[styles.button, activeButton === 'HistoryScreen' && styles.activeButton]} 
-                    onPress={() => handleNavigate('HistoryScreen')}>
-                    <Icons type={'advice'} active={activeButton === 'HistoryScreen'}/>
+                    style={[styles.button, activeButton === 'AdvicesScreen' && styles.activeButton]} 
+                    onPress={() => handleNavigate('AdvicesScreen')}>
+                    <Icons type={'advice'} active={activeButton === 'AdvicesScreen'}/>
                 </TouchableOpacity>
             </View>
 
             <View style={styles.btnContainer}>
                 <TouchableOpacity 
-                    style={[styles.button, activeButton === 'SettingsScreen' && styles.activeButton]} 
-                    onPress={() => handleNavigate('SettingsScreen')}>
-                    <Icons type={'plan'} active={activeButton === 'SettingsScreen'}/>
+                    style={[styles.button, activeButton === 'PlanScreen' && styles.activeButton]} 
+                    onPress={() => handleNavigate('PlanScreen')}>
+                    <Icons type={'plan'} active={activeButton === 'PlanScreen'}/>
                 </TouchableOpacity>
             </View>
 
             <View style={styles.btnContainer}>
                 <TouchableOpacity 
-                    style={[styles.button, activeButton === 'HomeScreen' && styles.activeButton]} 
-                    onPress={() => handleNavigate('HomeScreen')}>
-                    <Icons type={'tracker'} active={activeButton === 'HomeScreen'}/>
+                    style={[styles.button, activeButton === 'TrackerScreen' && styles.activeButton]} 
+                    onPress={() => handleNavigate('TrackerScreen')}>
+                    <Icons type={'tracker'} active={activeButton === 'TrackerScreen'}/>
                 </TouchableOpacity>
             </View>
 
             <View style={styles.btnContainer}>
                 <TouchableOpacity 
-                    style={[styles.button, activeButton === 'BookScreen' && styles.activeButton]} 
-                    onPress={() => handleNavigate('BookScreen')}>
-                    <Icons type={'game'} active={activeButton === 'BookScreen'}/>
+                    style={[styles.button, activeButton === 'GameScreen' && styles.activeButton]} 
+                    onPress={() => handleNavigate('GameScreen')}>
+                    <Icons type={'game'} active={activeButton === 'GameScreen'}/>
                 </TouchableOpacity>
             </View>
 
