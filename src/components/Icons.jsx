@@ -53,6 +53,15 @@ const Icons = ({ type }) => {
     case 'arrow':
       imageSource = require('../assets/common/arrow.png');
     break;
+    case 'camera':
+      imageSource = require('../assets/common/camera.png');
+    break;
+    case 'calendar':
+      imageSource = require('../assets/common/calendar.png');
+    break;
+    case 'delete':
+      imageSource = require('../assets/common/delete.png');
+    break;
   }
 
   return (

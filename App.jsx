@@ -13,6 +13,7 @@ import HomeScreen from './src/screens/HomeScreen';
 import ArticleScreen from './src/screens/ArticleScreen';
 import AdvicesScreen from './src/screens/AdvicesScreen';
 import PlanScreen from './src/screens/PlanScreen';
+import TrackerScreen from './src/screens/TrackerScreen';
 
 import WelcomeModal from './src/components/WelcomeModal';
 
@@ -94,6 +95,11 @@ const App = () => {
                             <Stack.Screen 
                                 name="PlanScreen" 
                                 component={PlanScreen} 
+                                options={{ headerShown: false }} 
+                            />
+                            <Stack.Screen 
+                                name="TrackerScreen" 
+                                component={TrackerScreen} 
                                 options={{ headerShown: false }} 
                             />
                         </Stack.Navigator>
