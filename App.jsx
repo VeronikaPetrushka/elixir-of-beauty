@@ -12,6 +12,7 @@ import MusicPlayer from './src/components/MusicPlayer';
 import HomeScreen from './src/screens/HomeScreen';
 import ArticleScreen from './src/screens/ArticleScreen';
 import AdvicesScreen from './src/screens/AdvicesScreen';
+import PlanScreen from './src/screens/PlanScreen';
 
 import WelcomeModal from './src/components/WelcomeModal';
 
@@ -88,6 +89,11 @@ const App = () => {
                             <Stack.Screen 
                                 name="AdvicesScreen" 
                                 component={AdvicesScreen} 
+                                options={{ headerShown: false }} 
+                            />
+                            <Stack.Screen 
+                                name="PlanScreen" 
+                                component={PlanScreen} 
                                 options={{ headerShown: false }} 
                             />
                         </Stack.Navigator>
