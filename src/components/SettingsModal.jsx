@@ -23,6 +23,7 @@ const SettingsModal = ({ visible, onClose }) => {
           await AsyncStorage.removeItem('planSelected');
           await AsyncStorage.removeItem('taskCompleted');
           await AsyncStorage.removeItem('taskSelected');
+          await AsyncStorage.removeItem('trackerItems');
 
           Alert.alert('Success', 'All data has been reset.');
       } catch (error) {
