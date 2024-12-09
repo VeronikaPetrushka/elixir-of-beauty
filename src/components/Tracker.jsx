@@ -144,6 +144,10 @@ const Tracker = () => {
                     <Icons type={'home'} />
                 </TouchableOpacity>
 
+                <TouchableOpacity style={[styles.task]} onPress={() => navigation.navigate('TaskScreen')}>
+                    <Icons type={'task'} />
+                </TouchableOpacity>
+
                 {calendar ? (
                     <Calendar
                         style={{ width: width * 0.89, borderRadius: 12 }}
@@ -257,6 +261,14 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: height * 0.055,
         left: 20
+    },
+
+    task: {
+        width: 50,
+        height: 50,
+        position: 'absolute',
+        top: height * 0.055,
+        right: 20
     },
 
     iconsContainer: {

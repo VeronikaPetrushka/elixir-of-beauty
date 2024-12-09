@@ -62,6 +62,21 @@ const Icons = ({ type }) => {
     case 'delete':
       imageSource = require('../assets/common/delete.png');
     break;
+    case 'task':
+      imageSource = require('../assets/common/task.png');
+    break;
+    case 'play':
+      imageSource = require('../assets/common/play.png');
+      iconStyle.push(styles.contain);
+    break;
+    case 'start':
+      imageSource = require('../assets/common/start.png');
+      iconStyle.push(styles.contain);
+    break;
+    case 'finish':
+      imageSource = require('../assets/common/finish.png');
+      iconStyle.push(styles.contain);
+    break;
   }
 
   return (
@@ -95,6 +110,11 @@ const styles = StyleSheet.create({
     height: '100%',
     objectFit: 'cover',
     tintColor: '#C80064',
+  },
+  contain: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'contain',
   }
 });
 

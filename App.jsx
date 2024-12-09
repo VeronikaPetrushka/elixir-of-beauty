@@ -14,6 +14,8 @@ import ArticleScreen from './src/screens/ArticleScreen';
 import AdvicesScreen from './src/screens/AdvicesScreen';
 import PlanScreen from './src/screens/PlanScreen';
 import TrackerScreen from './src/screens/TrackerScreen';
+import TaskScreen from './src/screens/TaskScreen';
+import GameScreen from './src/screens/GameScreen';
 
 import WelcomeModal from './src/components/WelcomeModal';
 
@@ -100,6 +102,16 @@ const App = () => {
                             <Stack.Screen 
                                 name="TrackerScreen" 
                                 component={TrackerScreen} 
+                                options={{ headerShown: false }} 
+                            />
+                            <Stack.Screen 
+                                name="TaskScreen" 
+                                component={TaskScreen} 
+                                options={{ headerShown: false }} 
+                            />
+                            <Stack.Screen 
+                                name="GameScreen" 
+                                component={GameScreen} 
                                 options={{ headerShown: false }} 
                             />
                         </Stack.Navigator>

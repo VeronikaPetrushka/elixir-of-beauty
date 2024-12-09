@@ -2,7 +2,7 @@ const article = [
     {
         title: 'What Would Your Royal Beauty Ritual Look Like 200 Years Ago?',
         image: require('../assets/articles/1.png'),
-        description: 'Imagine a world without modern creams, shampoos, or makeup. How would you care for yourself 200 years ago? In the early 19th century, beauty rituals were a true art form where nature and creativity worked hand in hand.'
+        description: 'Imagine a world without modern creams, shampoos, or makeup. How would you care for yourself 200 years ago? In the early 19th century, beauty rituals were a true art form where nature and creativity worked hand in hand. The ideal of beauty was pale, almost porcelain-like skin. To achieve this, women used masks made from milk, honey, or egg whites, and sometimes even mercury-based creams - dangerous but popular for combating pigmentation. To mattify their faces, they applied rice or flour powder scented with lavender. Luxurious hair required special care. It was washed rarely, using herbal infusions, and jasmine or rose oils were applied for shine. Curls and elegant hairstyles were secured with wax-based mixtures. Makeup was understated. Subtle blush made from carmine added freshness to the face, while lips were tinted with a balm of beetroot and beeswax. The look was completed with refined scents of rose, citrus, or vanilla. These procedures were time-consuming and sophisticated, as beauty has always demanded effort. Which of these past rituals would you try today?'
     },
     {
         title: 'How Did People Care for Their Skin in Medieval Kingdoms?',

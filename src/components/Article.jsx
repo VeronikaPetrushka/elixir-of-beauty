@@ -1,5 +1,6 @@
-import { View, Text, Image, TouchableOpacity, ImageBackground, StyleSheet, Dimensions, ScrollView, Share } from 'react-native';
+import { View, Text, Image, TouchableOpacity, ImageBackground, StyleSheet, Dimensions, ScrollView, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import Share from 'react-native-share';
 import Icons from "./Icons"
 
 const { height } = Dimensions.get('window');
@@ -9,20 +10,23 @@ const Article = ({article}) => {
 
     const handleShare = async () => {
         try {
-            const result = await Share.share({
-                message: `Check out this article: ${article.title}\n\n${article.description}\n\n${article.items?.map(item => `${item.item}: ${item.description}`).join('\n') || ''}\n\n${article.conclusion || ''}`,
-            });
-            if (result.action === Share.sharedAction) {
-                if (result.activityType) {
-                    console.log('Shared with activity type:', result.activityType);
-                } else {
-                    console.log('Shared successfully!');
-                }
-            } else if (result.action === Share.dismissedAction) {
-                console.log('Share dismissed');
+            const imageUrl = Image.resolveAssetSource(article.image).uri;
+    
+            const shareOptions = {
+                url: imageUrl,
+                title: `Check out this article: ${article.title}`,
+                message: `${article.title}\n\n${article.description}\n\n${article.items?.map(item => `${item.item}: ${item.description}`).join('\n') || ''}\n\n${article.conclusion || ''}`,
+            };
+    
+            const result = await Share.open(shareOptions);
+    
+            if (result.success) {
+                Alert.alert('Success', 'Shared successfully!');
+            } else {
+                Alert.alert('Share Dismissed', 'You dismissed the share.');
             }
         } catch (error) {
-            console.error('Error sharing article:', error);
+            Alert.alert('Error', 'Something went wrong. Please try again later!');
         }
     };
 

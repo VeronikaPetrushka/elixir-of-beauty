@@ -19,6 +19,10 @@ const SettingsModal = ({ visible, onClose }) => {
       try {
           await AsyncStorage.removeItem('userProfile');
           await AsyncStorage.removeItem('uploadedImage');
+          await AsyncStorage.removeItem('planCompleted');
+          await AsyncStorage.removeItem('planSelected');
+          await AsyncStorage.removeItem('taskCompleted');
+          await AsyncStorage.removeItem('taskSelected');
 
           Alert.alert('Success', 'All data has been reset.');
       } catch (error) {
@@ -44,7 +48,7 @@ const SettingsModal = ({ visible, onClose }) => {
                     {showResetConfirmation ? (
                         <>
                             <Text style={styles.confirmationText}>
-                                Are you sure you want to reset your progress? It will reset your account along with your achievements and planned routes!
+                                Are you sure you want to reset your progress? It will reset your account along with your personalized skincare analysis and recommended routine!
                             </Text>
                             <TouchableOpacity style={[styles.resetBtn, {marginTop: 0}]} onPress={handleReset}>
                                 <Text style={styles.resetBtnText}>Clear anyway</Text>
