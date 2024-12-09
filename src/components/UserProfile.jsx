@@ -17,10 +17,10 @@ const UserProfile = ({ visible, onClose }) => {
   useEffect(() => {
     const loadProfile = async () => {
       try {
-        const storedDate = await AsyncStorage.getItem('userProfile');
+        const storedData = await AsyncStorage.getItem('userProfile');
         const storedImageUri = await AsyncStorage.getItem('uploadedImage');
 
-        if (storedDate) {
+        if (storedData) {
           const parsedData = JSON.parse(storedData);
           setName(parsedData.name);
           setAge(parsedData.age);

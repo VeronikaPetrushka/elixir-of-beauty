@@ -32,8 +32,9 @@ const Home = () => {
     
       const loadName = async () => {
         try {
-          const storedName = await AsyncStorage.getItem('userProfile');
-          setUserName(storedName || '');
+          const storedInfo = await AsyncStorage.getItem('userProfile');
+          const parsedData = JSON.parse(storedInfo);
+          setUserName(parsedData.name || '');
         } catch (error) {
           console.error('Error loading name:', error);
         }
