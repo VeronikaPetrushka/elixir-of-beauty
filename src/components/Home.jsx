@@ -51,10 +51,12 @@ const Home = () => {
         }, [])
     );
 
-    const handleSettingsVisible = async () => {
-        setSettingsModalVisible(!settingsModalVisible);
+    const handleSettingsClose= async () => {
+        setSettingsModalVisible(false);
         setUploadedImage({ uri: Image.resolveAssetSource(require('../assets/avatar/user.png')).uri });
+        setUserName('')
         await loadAvatar();
+        await loadName();
     }
 
       const closeUserProfileModal = async () => {
@@ -75,11 +77,11 @@ const Home = () => {
                     />
                 </View>
                     <View style={styles.nameBox}>
-                        <Text style={styles.name}>Hi, {userName || "User"}</Text>
+                        <Text style={styles.name}>Hi, {userName || "Beauty"}</Text>
                     </View>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.settingsIcon} onPress={handleSettingsVisible}>
+            <TouchableOpacity style={styles.settingsIcon} onPress={() => setSettingsModalVisible(true)}>
                 <Icons type={'settings'} />
             </TouchableOpacity>
 
@@ -100,7 +102,7 @@ const Home = () => {
                 </ScrollView>
             </View>
 
-            <SettingsModal visible={settingsModalVisible} onClose={handleSettingsVisible} />
+            <SettingsModal visible={settingsModalVisible} onClose={handleSettingsClose} />
             <UserProfile visible={userProfileModalVisible} onClose={closeUserProfileModal}/>
         </View>
         </ImageBackground>
