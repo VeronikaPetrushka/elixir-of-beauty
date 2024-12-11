@@ -34,7 +34,11 @@ const Home = () => {
         try {
           const storedInfo = await AsyncStorage.getItem('userProfile');
           const parsedData = JSON.parse(storedInfo);
-          setUserName(parsedData.name || '');
+
+          if(parsedData) {
+            setUserName(parsedData.name || '');
+          }
+          
         } catch (error) {
           console.error('Error loading name:', error);
         }

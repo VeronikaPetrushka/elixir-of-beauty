@@ -28,7 +28,7 @@ const UserProfile = ({ visible, onClose }) => {
         } else {
           setName("");
           setAge(null);
-          setButtonText("Create account");
+          setButtonText("Create");
         }
 
         if (storedImageUri) {
@@ -155,7 +155,6 @@ const UserProfile = ({ visible, onClose }) => {
                     </View>
 
                 </View>
-                <View style={{height: height * 0.2}}></View>
                 </ScrollView>
 
               </View>
@@ -255,7 +254,7 @@ const styles = {
     width: "100%",
     alignItems: "center",
     padding: 12,
-    borderRadius: 10,
+    borderRadius: 25,
     marginTop: 20,
     backgroundColor: '#fa7fd9',
   },
@@ -279,7 +278,7 @@ const styles = {
     justifyContent: 'center',
     borderWidth: 1,
     borderColor: '#bd62a5',
-    borderRadius: 10,
+    borderRadius: 25,
     width: '100%',
     marginBottom: 20
   },
@@ -287,8 +286,6 @@ const styles = {
   errorText: {
     color: '#bd62a5',
     fontSize: 14,
-    position: 'absolute',
-    top: 100
   }
 };
 
