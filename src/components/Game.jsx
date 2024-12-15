@@ -54,7 +54,7 @@ const Game = () => {
     };
 
     return (
-        <ImageBackground source={require('../assets/back/back1.png')} style={{flex: 1, transform: [{ rotate: '180deg' }]}}>
+        <ImageBackground source={require('../assets/back/back2.png')} style={{flex: 1, transform: [{ rotate: '180deg' }]}}>
             <View style={styles.container}>
                 <TouchableOpacity style={styles.home} onPress={() => navigation.navigate('HomeScreen')}>
                     <Icons type={'home'} />
